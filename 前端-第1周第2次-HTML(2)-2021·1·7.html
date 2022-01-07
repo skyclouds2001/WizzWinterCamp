@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>前端-第1周第2次-HTML(2)-2021·1·7</title>
+</head>
+
+<body>
+    <form method="post" accept="#" name="person_info">
+        <table border="1" cellpadding="0" cellspacing="0" style="text-align: center;">
+            <tr class="1">
+                <td>
+                    <label for="name">姓名</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="name"/>
+                </td>
+                <td>
+                    <label for="sex">性别</label>
+                </td>
+                <td>
+                    <select name="sex" id="sex">
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="birth">出生年月</label>
+                </td>
+                <td>
+                    <input type="date" name="birth" id="birth"/>
+                </td>
+                <td rowspan="3">
+                    <label for="photo">照片</label>
+                    <input type="file" name="photo" accept="image/gif, image/jpeg" id="photo"/>
+                </td>
+            </tr>
+            <tr class="2">
+                <td>
+                    <label for="birthplace">籍贯</label>
+                </td>
+                <td>
+                    <input type="text" name="birthplace" id="birthplace"/>
+                </td>
+                <td>
+                    <label for="nationality">民族</label>
+                </td>
+                <td>
+                    <input type="text" name="nationality" id="nationality"/>
+                </td>
+                <td>
+                    <label for="height">身高</label>
+                </td>
+                <td>
+                    <input type="text" name="nationality" id="height"/>
+                </td>
+            </tr>
+            <tr class="3">
+                <td>
+                    <label for="political">政治面貌</label>
+                </td>
+                <td>
+                    <input type="text" name="political" id="political"/>
+                </td>
+                <td>
+                    <label for="degree">学历</label>
+                </td>
+                <td>
+                    <input type="text" name="degree" id="degree"/>
+                </td>
+                <td>
+                    <label for="profession">职业资格</label>
+                </td>
+                <td>
+                    <input type="text" name="profession" id="profession"/>
+                </td>
+            </tr>
+            <tr class="4">
+                <td rowspan="2">
+                    <label for="address">家庭住址</label>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <input type="text" name="address" id="address"/>
+                </td>
+                <td colspan="2">
+                    <label for="phone">联系电话</label>
+                </td>
+                <td colspan="2">
+                    <input type="text" name="phone" id="phone"/>
+                </td>
+            </tr>
+            <tr class="5">
+                <td colspan="2">
+                    <label for="email">E-mail</label>
+                </td>
+                <td colspan="2">
+                    <input type="email" name="email" id="email"/>
+                </td>
+            </tr>
+            <tr class="6">
+                <td rowspan="3">
+                    <label for="relation">社会关系</label>
+                </td>
+                <td>
+                    <label for="r_relation">关系</label>
+                </td>
+                <td>
+                    <label for="r_name">姓名</label>
+                </td>
+                <td>
+                    <label for="r_political">政治面貌</label>
+                </td>
+                <td colspan="3">
+                    <label for="r_workunit">工作单位</label>
+                </td>
+            </tr>
+            <tr class="7">
+                <td>
+                    <input type="text" name="r_relation" id="r_relation"/>
+                </td>
+                <td>
+                    <input type="text" name="r_name" id="r_name"/>
+                </td>
+                <td>
+                    <input type="text" name="r_political" id="r_political"/>
+                </td>
+                <td colspan="3">
+                    <input type="text" name="r_workunit" id="r_workunit"/>
+                </td>
+            </tr>
+            <tr class="8">
+                <td>
+                    <input type="text" name="r_relation_0" id="r_relation_0"/>
+                </td>
+                <td>
+                    <input type="text" name="r_name_0" id="r_name_0"/>
+                </td>
+                <td>
+                    <input type="text" name="r_political_0" id="r_political_0"/>
+                </td>
+                <td colspan="3">
+                    <input type="text" name="r_workunit_0" id="r_workunit_0"/>
+                </td>
+            </tr>
+            <tr class="9">
+                <td>
+                    <label for="education">教育背景</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="education" id="education" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr class="10">
+                <td>
+                    <label for="position">任职情况</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="position" id="position" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr class="11">
+                <td>
+                    <label for="price">获奖情况</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="price" id="price" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr class="11">
+                <td>
+                    <label for="hobby">特长爱好</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="hobby" id="hobby" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr class="12">
+                <td>
+                    <label for="statement">个人自述</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="statement" id="statement" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr class="13">
+                <td colspan="7">
+                    <br/>
+                    <input type="submit"/>
+                    <input type="reset"/>
+                    <br/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

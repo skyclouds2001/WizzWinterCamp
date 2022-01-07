@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>前端-第1周第2次-HTML(2)-2021·1·7</title>
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: 15px;
+        }
+        input, label, textarea {
+            border: 0px;
+        }
+        input:hover, textarea:hover {
+            border: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" accept="#" name="person_info">
+        <table border="1" cellpadding="0" cellspacing="0" style="text-align: center;">
+            <tr class="1">
+                <td>
+                    <label for="name" style="width: 150px; height: 75px;">姓名</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="name" style="width: 150px; height: 75px;"/>
+                </td>
+                <td>
+                    <label for="sex" style="width: 150px; height: 75px;">性别</label>
+                </td>
+                <td>
+                    <select name="sex" id="sex" style="width: 150px; height: 75px;">
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="birth" style="width: 150px; height: 75px;">出生年月</label>
+                </td>
+                <td>
+                    <input type="date" name="birth" id="birth" style="width: 150px; height: 75px;"/>
+                </td>
+                <td rowspan="3">
+                    <label for="photo" style="width: 200px; height: 75px;">照片</label><br/>
+                    <input type="file" name="photo" accept="image/*" id="photo" style="width: 200px; height: 150px;"/>
+                </td>
+            </tr>
+            <tr class="2">
+                <td>
+                    <label for="birthplace" style="width: 150px; height: 75px;">籍贯</label>
+                </td>
+                <td>
+                    <input type="text" name="birthplace" id="birthplace" style="width: 150px; height: 75px;"/>
+                </td>
+                <td>
+                    <label for="nationality" style="width: 150px; height: 75px;">民族</label>
+                </td>
+                <td>
+                    <input type="text" name="nationality" id="nationality" style="width: 150px; height: 75px;"/>
+                </td>
+                <td>
+                    <label for="height" style="width: 150px; height: 75px;">身高</label>
+                </td>
+                <td>
+                    <input type="text" name="nationality" id="height" style="width: 150px; height: 75px;"/>
+                </td>
+            </tr>
+            <tr class="3">
+                <td>
+                    <label for="political" style="width: 150px; height: 75px;">政治面貌</label>
+                </td>
+                <td>
+                    <input type="text" name="political" id="political" style="width: 150px; height: 75px;"/>
+                </td>
+                <td>
+                    <label for="degree" style="width: 150px; height: 75px;">学历</label>
+                </td>
+                <td>
+                    <input type="text" name="degree" id="degree" style="width: 150px; height: 75px;"/>
+                </td>
+                <td>
+                    <label for="profession" style="width: 150px; height: 75px;">职业资格</label>
+                </td>
+                <td>
+                    <input type="text" name="profession" id="profession" style="width: 150px; height: 75px;"/>
+                </td>
+            </tr>
+            <tr class="4">
+                <td rowspan="2">
+                    <label for="address" style="width: 150px; height: 100px;">家庭住址</label>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <input type="text" name="address" id="address" style="width: 300px; height: 100px;"/>
+                </td>
+                <td colspan="2">
+                    <label for="phone" style="width: 300px; height: 50px;">联系电话</label>
+                </td>
+                <td colspan="2">
+                    <input type="text" name="phone" id="phone" style="width: 350px; height: 50px;"/>
+                </td>
+            </tr>
+            <tr class="5">
+                <td colspan="2">
+                    <label for="email" style="width: 300px; height: 50px;">E-mail</label>
+                </td>
+                <td colspan="2">
+                    <input type="email" name="email" id="email" style="width: 350px; height: 50px;"/>
+                </td>
+            </tr>
+            <tr class="6">
+                <td rowspan="3">
+                    <label for="relation" style="width: 150px; height: 225px;">社会关系</label>
+                </td>
+                <td>
+                    <label for="r_relation" style="width: 150px; height: 75px;">关系</label>
+                </td>
+                <td>
+                    <label for="r_name" style="width: 150px; height: 75px;">姓名</label>
+                </td>
+                <td>
+                    <label for="r_political" style="width: 150px; height: 75px;">政治面貌</label>
+                </td>
+                <td colspan="3">
+                    <label for="r_workunit" style="width: 500px; height: 75px;">工作单位</label>
+                </td>
+            </tr>
+            <tr class="7">
+                <td>
+                    <input type="text" name="r_relation" id="r_relation" style="width: 150px; height: 75px;"/>
+                </td>
+                <td>
+                    <input type="text" name="r_name" id="r_name" style="width: 150px; height: 75px;"/>
+                </td>
+                <td>
+                    <input type="text" name="r_political" id="r_political" style="width: 150px; height: 75px;"/>
+                </td>
+                <td colspan="3">
+                    <input type="text" name="r_workunit" id="r_workunit" style="width: 500px; height: 75px;"/>
+                </td>
+            </tr>
+            <tr class="8">
+                <td>
+                    <input type="text" name="r_relation_0" id="r_relation_0" style="width: 150px; height: 75px;"/>
+                </td>
+                <td>
+                    <input type="text" name="r_name_0" id="r_name_0" style="width: 150px; height: 75px;"/>
+                </td>
+                <td>
+                    <input type="text" name="r_political_0" id="r_political_0" style="width: 150px; height: 75px;"/>
+                </td>
+                <td colspan="3">
+                    <input type="text" name="r_workunit_0" id="r_workunit_0" style="width: 500px; height: 75px;"/>
+                </td>
+            </tr>
+            <tr class="9">
+                <td>
+                    <label for="education" style="width: 150px; height: 215px;">教育背景</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="education" id="education" style="width: 950px; height: 215px;"></textarea>
+                </td>
+            </tr>
+            <tr class="10">
+                <td>
+                    <label for="position" style="width: 150px; height: 150px;">任职情况</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="position" id="position" style="width: 950px; height: 150px;"></textarea>
+                </td>
+            </tr>
+            <tr class="11">
+                <td>
+                    <label for="price" style="width: 150px; height: 215px;">获奖情况</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="price" id="price" style="width: 950px; height: 215px;"></textarea>
+                </td>
+            </tr>
+            <tr class="11">
+                <td>
+                    <label for="hobby" style="width: 150px; height: 100px;">特长爱好</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="hobby" id="hobby" style="width: 950px; height: 100px;"></textarea>
+                </td>
+            </tr>
+            <tr class="12">
+                <td>
+                    <label for="statement" style="width: 150px; height: 215px;">个人自述</label>
+                </td>
+                <td colspan="6">
+                    <textarea name="statement" id="statement" style="width: 950px; height: 215px;"></textarea>
+                </td>
+            </tr>
+            <tr class="13">
+                <td colspan="7">
+                    <br/>
+                    <input type="submit"/>
+                    <input type="reset"/>
+                    <br/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
