@@ -1,0 +1,124 @@
+.card {
+    width: 500px;
+
+    margin: 100px auto;
+}
+
+.card a {
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
+    color: black;
+}
+
+.card .img {
+    overflow: hidden;
+}
+
+.card img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.test {
+    padding: 2.5% 5% 5%;
+
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.card:hover .test {
+    color: rgb(170, 0, 24);
+}
+
+.test .line {
+    background-color: rgb(170, 0, 24);
+    width: 10%;
+    height: 3px;
+}
+
+.card:hover .line {
+    background-color: rgb(170, 0, 24);
+    width: 100%;
+    height: 3px;
+}
+
+.test h5 {
+    display: inline-block;
+
+    padding: 15px 0px 30px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.test > p {
+    display: inline-block;
+
+    width: 100%;
+    height: 75px;
+
+    color: rgb(153, 153, 153);
+
+    overflow: hidden;
+}
+
+.card:hover .test > p {
+    color: rgb(170, 0, 24);
+}
+
+.test span {
+    display: inline-block;
+
+    width: 100%;
+    height: auto;
+
+    padding: 10px 0px 0px;
+
+    line-height: 25px;
+
+    position: relative;
+}
+
+.test span p {
+    display: inline-block;
+
+    color: rgb(170, 0, 24);
+}
+
+.test span div {
+    display: inline-block;
+
+    position: absolute;
+    right: -15px;
+}
+
+
+
+
+
+.right-arrow {
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.right-arrow::after {
+    display: inline-block;
+    content: " ";
+    height: 9px;
+    width: 9px;
+    border-width: 2px 2px 0 0;
+    border-color: #c7c7cc;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    margin-top: -4.5px;
+}
