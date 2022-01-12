@@ -1,0 +1,105 @@
+/* 总体设置 */
+* {
+    box-sizing: border-box;
+}
+
+/* 外围容器设置 */
+.navigation_bar {
+    position: fixed;
+
+    top: 10vh;
+    left: 35vw;
+}
+.navigation_bar > ul {
+    padding: 1px;
+    border: 1px solid rgb(153, 153, 153);
+}
+
+/* 容器各项设置 */
+.navigation_bar > ul > li {
+    float: left;
+
+    position: relative;
+}
+.navigation_bar > ul > li:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+/* 容器各项超链接样式设置 */
+.navigation_bar > ul > li > a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    line-height: 2em;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    margin-right: 30px;
+}
+.navigation_bar > ul > li > a:hover {
+    color: white;
+
+    outline: 1px solid #ccc;
+}
+
+/* 下拉框样式设置部分 */
+.select {
+    display: none;
+
+    position: absolute;
+
+    width: 100px;
+}
+.select > li {
+    width: 110px;
+    height: 30px;
+    padding-left: 15px;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(153, 153, 153);
+    border-bottom: 0px;
+
+    line-height: 30px;
+}
+.select > li:last-child {
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+.select > li:hover {
+    background-color: white;
+}
+.select > li > a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    line-height: 2em;
+
+    width: 100%;
+    height: 100%;
+}
+.select > li > a:hover {
+    color: #aaa;
+}
+
+
+/* 实现下拉框与项目样式联动 */
+.item:hover .select {
+    display: block;
+}
+.item:hover > a {
+    color: white;
+}
+
+
+/* 清除浮动模块 */
+.clearfix::before, .clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+    /* 以下代码为了解决 IE 浏览器的兼容问题 */
+    height: 0;
+    overflow: hidden;
+    /* 以下代码为了去隐藏content中的内容 */
+    visibility: hidden;
+  }
