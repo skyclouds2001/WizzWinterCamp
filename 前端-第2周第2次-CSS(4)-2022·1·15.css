@@ -1,0 +1,152 @@
+/* 背景相关设置 */
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+
+    background-image: url('https://www.xidian.edu.cn/1a2020sydt/2022112.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-origin: border-box;
+    background-attachment: fixed;
+
+    min-width: 1200px;
+}
+
+/* nav设置 */
+nav {
+    width: 100vw;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* logo部分 */
+.logo {
+    flex: 1;
+}
+
+/* 导航栏具体部分 */
+.bar {
+    flex: 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 20px;
+
+    position: relative;
+}
+.bar > li {
+    flex: 1;
+}
+.bar > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: 2em;
+}
+
+/* 导航栏下拉框部分 */
+.select {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 75%);
+
+    height: 200px;
+    width: 1040px;
+    padding: 20px 10px;
+}
+.left, .right {
+    flex: 1;
+}
+.left > ul {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 66.7%;
+    height: 100%;
+}
+.left > ul > li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    width: 50%;
+    height: 25%;
+}
+.left > ul > li > a {
+    text-decoration: none;
+    color: #666;
+
+    line-height: 3em;
+    text-align: left;
+
+    display: block;
+}
+
+/* 鼠标移动响应 */
+.select {
+    display: none;
+}
+.bar > li:hover .select {
+    display: flex;
+}
+.bar > li:hover {
+    background-color: rgb(186, 0, 0);
+}
+.left > ul > li > a:hover {
+    color: rgb(186, 0, 0);
+}
+
+/* 其他资源部分 */
+.right-arrow {
+    display: inline-block;
+    position: relative;
+    width: 9px;
+    height: 9px;
+    margin-right: 5px;
+}
+.right-arrow::after {
+    display: inline-block;
+    content: " ";
+    height: 4.5px;
+    width: 4.5px;
+    border-width: 2px 2px 0 0;
+    border-color: #666;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    margin-top: -4.5px;
+}
+.clearfix::before, .clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+    /* 以下代码为了解决 IE 浏览器的兼容问题 */
+    height: 0;
+    overflow: hidden;
+    /* 以下代码为了去隐藏content中的内容 */
+    visibility: hidden;
+}
