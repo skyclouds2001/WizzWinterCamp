@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    position: relative;
+
+    width: 250px;
+    height: 166px;
+
+    perspective: 1000px;
+}
+.photoalbum {
+    width: 250px;
+    height: 166px;
+
+    position: absolute;
+
+    transform-style: preserve-3d;
+
+    animation: anim 10s infinite both linear;
+}
+@keyframes anim {
+    from {
+        transform: rotateY(0deg) rotateX(-30deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(-30deg);
+    }
+}
+
+.photoalbum img {
+    width: 250px;
+    height: 166px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform-style: preserve-3d;
+}
+
+.photoalbum img:nth-child(1) {
+    transform: translateZ(-216.5px) rotateY(180deg);
+}
+.photoalbum img:nth-child(2) {
+    transform: translate3d(233.25px, 0, -108.25px) rotateY(120deg);
+}
+.photoalbum img:nth-child(3) {
+    transform: translate3d(-233.25px, 0, -108.25px) rotateY(240deg);
+}
+.photoalbum img:nth-child(4) {
+    transform: translate3d(233.25px, 0, 108.25px) rotateY(60deg);
+}
+.photoalbum img:nth-child(5) {
+    transform: translate3d(-233.25px, 0, 108.25px) rotateY(300deg);
+}
+.photoalbum img:nth-child(6) {
+    transform: translateZ(216.5px);
+}
