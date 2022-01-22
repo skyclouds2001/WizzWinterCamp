@@ -1,0 +1,118 @@
+body {
+    background-color: white;
+    background-image: url(http://photogz.photo.store.qq.com/psc?/V13caMay1SDaMM/05RlWl8gsTOH*Z17MtCBzJYykIcp7etRkkmWPcQwEXQoKfGN*VF3byUWQgDTBePm2EOJ2J36h.mzywKgwPLXrg!!/b&amp;bo=oAU4BKAFOAQRADc!&rf=viewer_311);
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-origin: border-box;
+    background-attachment: fixed;
+}
+
+.box {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'a a b d f'
+                         'a a c e g';
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    width: 1000px;
+    height: auto;
+    padding: 25px;
+    margin: 25vh auto;
+    min-width: 1000px;
+
+    background-color: rgba(204, 204, 204, 0.5);
+
+    border-radius: 10px;
+
+    transition-property: box-shadow, background-color;
+    transition-duration: 1000ms;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+.box:hover {
+    box-shadow: 0px 0px 5px 5px #aaa;
+    background-color: rgba(204, 204, 204, 1);
+}
+
+.item:nth-child(1) {
+    grid-area: a;
+}
+.item:nth-child(2) {
+    grid-area: b;
+}
+.item:nth-child(3) {
+    grid-area: c;
+}
+.item:nth-child(4) {
+    grid-area: d;
+}
+.item:nth-child(5) {
+    grid-area: e;
+}
+.item:nth-child(6) {
+    grid-area: f;
+}
+.item:nth-child(7) {
+    grid-area: g;
+}
+
+.img {
+    width: 100%;
+
+    position: relative;
+}
+.img img {
+    width: 100%;
+
+    border-radius: 5px;
+
+    transition-property: box-shadow, filter;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+
+    filter: none;
+}
+
+.img:hover img {
+    box-shadow: 0px 0px 10px 5px #999;
+
+    filter: saturate(125%);
+}
+
+.title {
+    width: 80%;
+    height: 2em;
+
+    position: absolute;
+    bottom: 2.5%;
+    left: 10%;
+
+    color: #ffffff;
+    line-height: 2em;
+    text-align: center;
+    font-size: 15px;
+    text-shadow: 0px 0px 10px #000;
+
+    transition-property: font-size, bottom;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.img:hover .title {
+    font-size: 20px;
+    bottom: 25%;
+    text-shadow: 0px 0px 20px #000;
+}
+.item:nth-child(1) .img:hover .title {
+    font-size: 30px;
+    text-shadow: 0px 0px 30px #000;
+}
