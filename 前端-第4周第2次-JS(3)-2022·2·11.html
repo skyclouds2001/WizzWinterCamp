@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>前端-第4周第2次-JS(3)-2022·2·11</title>
+
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            margin: 100px auto;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 5px 10px;
+        }
+        td:last-child {
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: red;
+        }
+        caption {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto;
+        }
+        form > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>学生信息</caption>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>学号</th>
+            <th>电话</th>
+            <th>邮箱</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>Li Ming</td>
+            <td>22</td>
+            <td>20200001</td>
+            <td>13423554322</td>
+            <td>liming@163.com</td>
+            <td>删除</td>
+        </tr>
+    </table>
+
+    <form name="form" autocomplete="off">
+        <h3>提交学生信息</h3>
+        <div>
+            <label for="name">姓名</label>
+            <input type="text" name="name" id="name" required value="Chen">
+        </div>
+        <div>
+            <label for="age">年龄</label>
+            <input type="number" name="age" id="age" required value="20">
+        </div>
+        <div>
+            <label for="id">学号</label>
+            <input type="number" name="id" id="id" required value="2344">
+        </div>
+        <div>
+            <label for="phone">电话</label>
+            <input type="tel" name="phone" id="phone" required value="12343234338">
+        </div>
+        <div>
+            <label for="email">邮箱</label>
+            <input type="email" name="email" id="email" required value="suy@don.com">
+        </div>
+        <div>
+            <button name="add" type="button" id="add">添加</button>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        window.onload = () => {
+            document.getElementById('add').onclick = handleAdd;
+
+            let trs = document.getElementsByTagName('tr');
+            for(let i = 0; i < trs.length; ++i) {
+                trs[i].lastElementChild.onclick = handleDelete;
+            }
+        };
+
+        function handleDelete() {
+            this.parentNode.remove();
+        }
+
+        function handleAdd() {
+            const td = document.createElement('td');
+            const tr = document.createElement('tr');
+
+            const name = td.cloneNode();
+            name.innerHTML = document.getElementById('name').value;
+            const age = td.cloneNode();
+            age.innerHTML = document.getElementById('age').value;
+            const id = td.cloneNode();
+            id.innerHTML = document.getElementById('id').value;
+            const phone = td.cloneNode();
+            phone.innerHTML = document.getElementById('phone').value;
+            const email = td.cloneNode();
+            email.innerHTML = document.getElementById('email').value;
+            const del = td.cloneNode();
+            del.innerHTML = '删除';
+            del.onclick = handleDelete;
+
+            tr.append(name, age, id, phone, email, del);
+
+            document.getElementsByTagName('table')[0].append(tr);
+        }
+    </script>
+</body>
+
+</html>
